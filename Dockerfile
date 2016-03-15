@@ -7,4 +7,6 @@ COPY config/default.conf /etc/nginx/conf.d/default.conf
 
 COPY docker_entrypoint.sh /entrypoint.sh
 
+CMD ["nginx", "-g", "daemon off;"]
+
 ENTRYPOINT ["/entrypoint.sh"]
